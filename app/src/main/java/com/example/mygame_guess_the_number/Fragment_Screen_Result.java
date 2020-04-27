@@ -50,22 +50,35 @@ public class Fragment_Screen_Result extends Fragment {
             point = point + 0;
 
         } else if (raznitsa <= 20 && raznitsa >= 11) {
-            result.setText("Ты прохмахнулся. Не рекомендую играть в лоторею. - 20 очков ");
+            result.setText("Ты прохмахнулся. Не рекомендую играть в лоторею. -20 очков ");
 
         } else if (raznitsa <= 30 && raznitsa >= 21) {
-            result.setText("Промах. Это фиаско вратишка. - 30 очков ");
+            result.setText("Промах. Это фиаско вратишка. -30 очков ");
 
         } else if (raznitsa <= 40 && raznitsa >= 31) {
-            result.setText("Ни фига не понял, но очень интересно - 50 очков ");
+            result.setText("Ни фига не понял, но очень интересно -40 очков ");
 
-        } else if (raznitsa <= 60 && raznitsa >= 41) {
-            result.setText("Ну не правильно! Ебани ты артист! -60 очков ");
+        }else if (raznitsa <= 50 && raznitsa >= 41){
+            result.setText("Не правильно! Криворукий -50 очей");
+
+        } else if (raznitsa <= 60 && raznitsa >= 51) {
+            result.setText("Ну не правильно! Ебани ты артист! -60 очков");
+
+        }else if (raznitsa <=70 && raznitsa >=61) {
+            result.setText("Я так и знал что ты тугодум -70 очей");
+
+        }else if (raznitsa <=80 && raznitsa >=71) {
+            result.setText("Считаешь себя умным? Не угодал! -80 очей");
+        }else if(raznitsa<=90 && raznitsa >=81) {
+            result.setText("Промах! Занятие Х*йней на работе развивает боковое зрение,слух,реакцию и бдительность в целом.");
+
+        }else if(raznitsa<=100 && raznitsa >=91){
+            result.setText("Доктор, я каждый день хожу в магазин за водкой,скажите,я шопоголик?");
 
         } else {
-            result.setText("Не правильно! ");
-            point = point - 60;
+            result.setText("Попробуйте еще раз");
+            point = point - 100;
         }
-
     }
 
     public static Fragment_Screen_Result newInstance(Integer total1) {
